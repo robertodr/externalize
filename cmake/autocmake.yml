@@ -1,0 +1,25 @@
+name: externalize
+
+min_cmake_version: 3.1
+
+url_root: https://github.com/coderefinery/autocmake/raw/master/
+
+modules:
+- compilers:
+  - source:
+    - '%(url_root)modules/cc.cmake'
+    - '%(url_root)modules/cxx.cmake'
+- flags:
+  - source:
+    - '%(url_root)compilers/GNU.CXX.cmake'
+    - '%(url_root)compilers/Intel.CXX.cmake'
+    - '%(url_root)compilers/Clang.CXX.cmake'
+- plugins:
+  - source:
+    - '%(url_root)modules/ccache.cmake'
+    - '%(url_root)modules/definitions.cmake'
+    - '%(url_root)modules/code_coverage.cmake'
+    - '%(url_root)modules/safeguards.cmake'
+    - '%(url_root)modules/default_build_paths.cmake'
+    - '%(url_root)modules/src.cmake'
+    - 'custom/external.cmake'
