@@ -24,6 +24,7 @@ Options:
   --ccache=<USE_CCACHE>                  Toggle use of ccache <ON/OFF> [default: ON].
   --add-definitions=<STRING>             Add preprocesor definitions [default: ''].
   --coverage                             Enable code coverage [default: False].
+  --pcmsolver=<ENABLE_PCMSOLVER>         Toggle use of PCMSolver <ON/OFF> [default: ON].
   --type=<TYPE>                          Set the CMake build type (debug, release, or relwithdeb) [default: release].
   --generator=<STRING>                   Set the CMake build system generator [default: Unix Makefiles].
   --show                                 Show CMake command and exit.
@@ -48,6 +49,7 @@ def gen_cmake_command(options, arguments):
     command.append('-DUSE_CCACHE={0}'.format(arguments['--ccache']))
     command.append('-DPREPROCESSOR_DEFINITIONS="{0}"'.format(arguments['--add-definitions']))
     command.append('-DENABLE_CODE_COVERAGE={0}'.format(arguments['--coverage']))
+    command.append('-DENABLE_PCMSOLVER={0}'.format(arguments['--pcmsolver']))
     command.append('-DCMAKE_BUILD_TYPE={0}'.format(arguments['--type']))
     command.append('-G "{0}"'.format(arguments['--generator']))
     if arguments['--cmake-options'] != "''":

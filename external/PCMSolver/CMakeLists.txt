@@ -30,9 +30,6 @@ if(NOT PCMSolver_FOUND AND ${ENABLE_PCMSOLVER})
        INSTALL_COMMAND ${CMAKE_MAKE_PROGRAM} install
                       DESTDIR=${CMAKE_BINARY_DIR}/stage
     )
-    configure_file(${CMAKE_SOURCE_DIR}/psi4/share/python/pcm_placeholder.py.in
-       ${CMAKE_SOURCE_DIR}/share/python/pcm_placeholder.py
-    )
 else()
    add_library(pcmsolver_external INTERFACE)
 endif()

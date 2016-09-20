@@ -23,3 +23,4 @@ modules:
     - '%(url_root)modules/default_build_paths.cmake'
     - '%(url_root)modules/src.cmake'
     - 'custom/external.cmake'
+    - 'custom/pcmsolver.cmake'
