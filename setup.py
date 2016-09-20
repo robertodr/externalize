@@ -13,8 +13,8 @@ from autocmake.external import docopt
 
 options = """
 Usage:
-  ./setup [options] [<builddir>]
-  ./setup (-h | --help)
+  ./setup.py [options] [<builddir>]
+  ./setup.py (-h | --help)
 
 Options:
   --cc=<CC>                              C compiler [default: gcc].
